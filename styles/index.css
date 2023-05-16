@@ -1,0 +1,187 @@
+:root {
+	--font-text: 'Nunito Sans', sans-serif;
+	--font-code: 'Roboto Mono', Consolas;
+	--font-logo: 'Raleway', sans-serif;
+	--font-logo-black: 'Raleway Black', sans-serif;
+	--dark-color: #1f2937;
+	--text-dark-color: #e7e9ea;
+	--link-dark-color: #73cffa;
+	--border-dark-color: #586474;
+	--light-color: #f9fafb;
+	--text-light-color: #16191d;
+	--link-light-color: #08c;
+	--border-light-color: #f2f2f2;
+	--primary-color: #6247aa;
+	--secondary-color: #6267aa;
+	--container-sm: 768px;
+	--container-md: 992px;
+	--container-lg: 1200px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--font-text);
+	background-color: var(--light-color);
+	color: var(--text-light-color);
+	min-height: 100vh;
+	animation: opacity 0.3s ease-in-out;
+}
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.home {
+	margin: auto;
+}
+
+nav {
+	width: 100%;
+	padding: 16px 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav li {
+	list-style: none;
+}
+
+nav a {
+	margin: 0 20px;
+}
+
+.logo {
+	font-size: 1rem;
+}
+
+.navbar-services a {
+	text-decoration: none;
+	color: var(--primary-color);
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.2s ease-in-out;
+}
+
+.navbar-services a:hover {
+	border-color: var(--primary-color);
+}
+
+.navbar-social a {
+	font-size: 1.3rem;
+	color: var(--text-light-color);
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 8px;
+}
+
+img {
+	width: 150px;
+	border-radius: 50%;
+	margin-bottom: 4px;
+}
+
+figcaption {
+	gap: 16px;
+	max-width: 300px;
+}
+
+figcaption h2 {
+	text-align: center;
+	font-weight: 400;
+}
+
+.list-services {
+	width: 80%;
+	margin: auto;
+	padding-bottom: 32px;
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: 8px;
+}
+
+.list-services ul {
+	padding-left: 20px;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+}
+@media screen and (min-width: 900px) {
+	.home {
+		width: 90%;
+	}
+
+	.home nav {
+		font-weight: 600;
+	}
+
+	.home section {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0;
+		gap: 3rem;
+		padding: 0 32px;
+		place-content: center;
+		height: 75vh;
+	}
+
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(255, 255, 255);
+		border-radius: 24px;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	}
+
+	figcaption {
+		max-width: none;
+	}
+
+	figcaption h3 {
+		font-weight: 400;
+	}
+	figcaption p {
+		width: 400px;
+		margin: auto;
+		text-align: center;
+		margin-top: 12px;
+	}
+
+	img {
+		width: 150px;
+	}
+
+	.list-services {
+		width: 90%;
+	}
+
+	.list-services ul {
+		width: 100%;
+	}
+}

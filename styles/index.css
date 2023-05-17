@@ -51,6 +51,10 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	gap: 12px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	background-color: var(--light-color);
 }
 
 nav ul {
@@ -62,25 +66,37 @@ nav li {
 }
 
 nav a {
-	margin: 0 20px;
 	cursor: pointer;
 }
 
 .logo {
-	font-size: 1rem;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	font-weight: 600;
 }
-
+.logo br {
+	display: none;
+}
+.navbar-services {
+	display: none;
+}
 .navbar-services a {
+	margin: 0 20px;
 	text-decoration: none;
 	color: var(--primary-color);
 	border-bottom: 2px solid transparent;
 	transition: border-color 0.2s ease-in-out;
 }
 
-.navbar-services a:hover {
-	border-color: var(--primary-color);
+@media (hover: hover) {
+	.navbar-services a:hover {
+		border-color: var(--primary-color);
+	}
 }
-
+.navbar-social {
+	display: none;
+	gap: 12px;
+}
 .navbar-social a {
 	font-size: 1.3rem;
 	color: var(--text-light-color);
@@ -89,32 +105,71 @@ nav a {
 .navbar-social a:hover {
 	color: var(--primary-color);
 }
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.burger-modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.burger-modal li {
+	width: 100%;
+	background-color: var(--primary-color);
+	padding: 12px;
+}
+.burger-modal li:not(:first-child) {
+	border-top: 1px solid white;
+}
+.burger-modal li:last-child {
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.burger-modal a {
+	color: #fff;
+}
 figure {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	text-align: center;
 	gap: 8px;
+	height: 100vh;
 }
-
+figure .navbar-social {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
 img {
 	width: 150px;
 	border-radius: 50%;
-	margin-bottom: 4px;
 }
 
 figcaption {
 	gap: 16px;
+	width: 80%;
 	max-width: 300px;
+	margin: 16px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
-figcaption h2 {
-	text-align: center;
-	font-weight: 400;
+figcaption h3 {
+	text-transform: uppercase;
 }
 
 .list-services {
 	width: 80%;
+	text-align: justify;
 	margin: auto;
 	padding-bottom: 32px;
 	gap: 1rem;
@@ -133,11 +188,25 @@ footer {
 	gap: 4px;
 	color: gray;
 }
+.hidden {
+	display: none;
+}
 @media screen and (min-width: 900px) {
-	.home {
-		width: 90%;
+	.burger-modal {
+		display: none;
 	}
-
+	nav {
+		position: static;
+	}
+	.home {
+		width: 100%;
+	}
+	nav > :is(.navbar-services, .navbar-social) {
+		display: flex;
+	}
+	article .navbar-social {
+		display: none;
+	}
 	.home nav {
 		font-weight: 600;
 	}
@@ -162,6 +231,7 @@ footer {
 		background-color: rgb(255, 255, 255);
 		border-radius: 24px;
 		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+		padding: 32px 0;
 	}
 
 	figcaption {
@@ -184,6 +254,7 @@ footer {
 
 	.list-services {
 		width: 90%;
+		margin-top: auto;
 	}
 
 	.list-services ul {

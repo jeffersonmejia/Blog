@@ -7,7 +7,7 @@
 	--text-dark-color: #e7e9ea;
 	--link-dark-color: #73cffa;
 	--border-dark-color: #586474;
-	--light-color: #f9fafb;
+	--light-color: #f0f2f5;
 	--text-light-color: #16191d;
 	--link-light-color: #08c;
 	--border-light-color: #f2f2f2;
@@ -231,7 +231,7 @@ footer {
 		width: 100%;
 		background-color: rgb(255, 255, 255);
 		border-radius: 24px;
-		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 		padding: 32px 0;
 	}
 

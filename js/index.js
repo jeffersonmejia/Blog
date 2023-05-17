@@ -9,6 +9,7 @@ function appendBurgerMenu() {
 	$close.textContent = 'Cerrar'
 	$close.classList.add('close-burger-modal')
 
+	$clone.classList.add('hidden')
 	$clone.appendChild($close)
 	$clone.classList.add('modal', 'burger-modal')
 	$header.appendChild($clone)

@@ -186,6 +186,7 @@ footer {
 	align-items: center;
 	gap: 4px;
 	color: gray;
+	margin-bottom: 24px;
 }
 .hidden {
 	display: none;
@@ -259,5 +260,8 @@ footer {
 
 	.list-services ul {
 		width: 100%;
+	}
+	footer {
+		margin-bottom: 0;
 	}
 }

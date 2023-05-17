@@ -197,6 +197,7 @@ footer {
 	}
 	nav {
 		position: static;
+		box-shadow: none;
 	}
 	.home {
 		width: 100%;

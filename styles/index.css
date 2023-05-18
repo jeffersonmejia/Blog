@@ -299,6 +299,9 @@ footer {
 	.list-services ul {
 		width: 100%;
 	}
+	nav div {
+		width: 80px;
+	}
 	footer {
 		margin-bottom: 0;
 		margin-top: 12px;

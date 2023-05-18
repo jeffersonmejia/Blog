@@ -132,6 +132,7 @@ nav a {
 	flex-direction: column;
 	justify-content: center;
 	animation: translateY 0.3s ease-in-out;
+	z-index: 998;
 }
 @keyframes translateY {
 	from {
@@ -144,19 +145,18 @@ nav a {
 .burger-modal li {
 	width: 100%;
 	background-color: var(--primary-color);
-	padding: 12px;
 	list-style: none;
 }
 .burger-modal li:not(:first-child) {
 	border-top: 1px solid white;
 }
-.burger-modal li:last-child {
-	color: #fff;
-	text-align: center;
-	cursor: pointer;
-}
+
 .burger-modal a {
 	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 12px;
 }
 section figure {
 	display: flex;
@@ -228,6 +228,7 @@ footer {
 	justify-content: center;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
+	z-index: 999;
 }
 .hidden {
 	display: none;

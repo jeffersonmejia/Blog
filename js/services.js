@@ -3,7 +3,8 @@ import { appendBurgerModal, toggleModal } from './modules/burger.js'
 const d = document
 const $services = d.querySelector('.navbar-services'),
 	$header = d.querySelector('header'),
-	$servicesCloned = $services.cloneNode(true)
+	$servicesCloned = $services.cloneNode(true),
+	$burgerMenu = d.querySelector('.burger-menu i')
 
 function isMobileDevice() {
 	const mobileRegex = [
@@ -40,7 +41,7 @@ d.addEventListener('DOMContentLoaded', (e) => {
 
 d.addEventListener('click', ({ target }) => {
 	const $burgerModal = $header.querySelector('.burger-modal')
-	toggleModal(target, $burgerModal)
+	toggleModal(target, $burgerModal, $burgerMenu)
 	if (target.matches('figure button')) {
 		const $caption = target.parentElement
 		const $price = $caption.querySelector('small')

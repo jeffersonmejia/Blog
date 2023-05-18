@@ -12,7 +12,6 @@ export function appendBurgerModal($header, $clone) {
 }
 
 export function toggleModal(clicked, $modal) {
-	console.log($modal)
 	if (clicked.matches('.burger-menu') || clicked.matches('.burger-menu *')) {
 		$modal.classList.remove('hidden')
 	} else if (clicked.matches('.close-burger-modal')) {

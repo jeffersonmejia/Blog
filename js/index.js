@@ -1,27 +1,33 @@
 const d = document
 const $services = d.querySelector('.navbar-services'),
 	$linkServices = d.querySelectorAll('.navbar-services a'),
-	$header = d.querySelector('header')
+	$header = d.querySelector('header'),
+	$servicesCloned = $services.cloneNode(true)
 
-function appendBurgerMenu() {
-	let $clone = $services.cloneNode(true)
+function appendBurgerModal() {
 	const $close = d.createElement('li')
 	$close.textContent = 'Cerrar'
 	$close.classList.add('close-burger-modal')
 
-	$clone.classList.add('hidden')
-	$clone.appendChild($close)
-	$clone.classList.add('modal', 'burger-modal')
-	$header.appendChild($clone)
+	$servicesCloned.classList.add('hidden')
+	$servicesCloned.appendChild($close)
+	$servicesCloned.classList.add('modal', 'burger-modal')
+	$header.appendChild($servicesCloned)
+}
+
+function toggleModal(clicked) {
+	const $burgerModal = $header.querySelector('.burger-modal')
+	if (clicked.matches('.burger-menu') || clicked.matches('.burger-menu *')) {
+		$burgerModal.classList.remove('hidden')
+	} else if (clicked.matches('.close-burger-modal')) {
+		$burgerModal.classList.add('hidden')
+	}
 }
 
 d.addEventListener('DOMContentLoaded', (e) => {
-	appendBurgerMenu()
+	appendBurgerModal()
 })
 
-d.addEventListener('click', (e) => {
-	if (e.target.matches('.close-burger-modal')) {
-		const $burgerModal = $header.querySelector('.burger-modal')
-		$burgerModal.classList.toggle('hidden')
-	}
+d.addEventListener('click', ({ target }) => {
+	toggleModal(target)
 })

@@ -126,16 +126,29 @@ nav a {
 	left: 0;
 	right: 0;
 	background-color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	align-items: center;
 }
 .burger-modal {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	justify-content: center;
+	animation: translateY 0.3s ease-in-out;
+}
+@keyframes translateY {
+	from {
+		transform: translateY(16px);
+	}
+	to {
+		transform: translateY(0);
+	}
 }
 .burger-modal li {
 	width: 100%;
 	background-color: var(--primary-color);
 	padding: 12px;
+	list-style: none;
 }
 .burger-modal li:not(:first-child) {
 	border-top: 1px solid white;
@@ -193,7 +206,6 @@ section p {
 	flex-direction: column;
 	margin-top: 8px;
 }
-
 .list-services ul {
 	padding-left: 20px;
 }
@@ -204,6 +216,21 @@ footer {
 	gap: 4px;
 	color: gray;
 	margin-bottom: 24px;
+}
+.burger-menu {
+	width: 8vh;
+	height: 8vh;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 2vh;
+	right: 4vh;
+	background-color: var(--primary-color);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
 }
 .hidden {
 	display: none;

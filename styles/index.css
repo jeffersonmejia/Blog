@@ -86,8 +86,9 @@ nav a {
 	}
 }
 .navbar-social {
-	display: none;
 	gap: 12px;
+	display: flex;
+	align-items: center;
 }
 .navbar-social a {
 	font-size: 1.3rem;
@@ -96,6 +97,27 @@ nav a {
 
 .navbar-social a:hover {
 	color: var(--primary-color);
+}
+.whatsapp-contact {
+	background-color: rgb(199, 255, 199);
+	border: 1px solid rgb(137, 175, 137);
+	border-radius: 24px;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	justify-content: center;
+	color: rgb(72, 94, 72);
+	font-size: 1rem;
+	text-decoration: none;
+	width: 100%;
+	max-width: 200px;
+	margin: auto;
+	transition: background-color 0.3s ease-in-out;
+	margin-bottom: 4px;
+}
+.whatsapp-contact:hover {
+	background-color: rgb(178, 230, 178);
 }
 .modal {
 	position: fixed;
@@ -192,6 +214,7 @@ footer {
 	}
 	nav {
 		position: static;
+		margin-bottom: 12px;
 	}
 	.home {
 		width: 100%;
@@ -253,5 +276,6 @@ footer {
 	}
 	footer {
 		margin-bottom: 0;
+		margin-top: 12px;
 	}
 }

@@ -177,7 +177,7 @@ header a {
 	display: flex;
 	align-items: center;
 }
-.profile img {
+.profile > img {
 	border-radius: 50%;
 	grid-column: 1/-1;
 	width: 100%;
@@ -217,7 +217,7 @@ header {
 header div {
 	display: none;
 }
-.profile img {
+.profile > img {
 	max-width: 150px;
 	grid-column: 1/-1;
 }
@@ -431,7 +431,7 @@ footer {
 	.profile h2 {
 		text-align: left;
 	}
-	.profile img {
+	.profile > img {
 		max-width: none;
 		width: 300px;
 	}

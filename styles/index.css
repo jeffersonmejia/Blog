@@ -252,6 +252,7 @@ header {
 }
 footer {
 	margin-top: 32px;
+	font-size: 0.8rem;
 }
 
 .burger-menu {
@@ -457,5 +458,6 @@ footer {
 		position: fixed;
 		bottom: 0;
 		margin-bottom: 32px;
+		font-size: initial;
 	}
 }

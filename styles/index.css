@@ -131,6 +131,14 @@ header a {
 	font-size: 0.7rem;
 	text-decoration: none;
 }
+@keyframes translateY {
+	from {
+		transform: translateY(16px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
 
 .burger-modal {
 	display: flex;
@@ -140,18 +148,14 @@ header a {
 	animation: translateY 0.3s ease-in-out;
 	z-index: 998;
 }
-@keyframes translateY {
-	from {
-		transform: translateY(16px);
-	}
-	to {
-		transform: translateY(0);
-	}
-}
 .burger-modal li {
 	width: 100%;
 	background-color: var(--fds-blue-70);
 	list-style: none;
+}
+.burger-modal :is(li, a) {
+	padding: 0;
+	margin: 0;
 }
 .burger-modal li:not(:first-child) {
 	border-top: 1px solid white;
@@ -159,6 +163,8 @@ header a {
 
 .burger-modal a {
 	color: #fff;
+	background-color: var(--fds-blue-70);
+	border: none;
 	display: block;
 	width: 100%;
 	height: 100%;

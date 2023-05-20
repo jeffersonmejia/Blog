@@ -214,6 +214,9 @@ header {
 	grid-column: 1/2;
 	grid-row: 1/-1;
 }
+header p {
+	color: var(--fds-blue-30);
+}
 header div {
 	display: none;
 }
@@ -349,7 +352,6 @@ footer {
 	header p {
 		font-size: 1rem;
 		margin-top: 4px;
-		color: var(--fds-blue-30);
 	}
 	.burger-modal,
 	.burger-menu {

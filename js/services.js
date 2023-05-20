@@ -4,7 +4,8 @@ const d = document
 const $services = d.querySelector('.navbar-services'),
 	$header = d.querySelector('header'),
 	$servicesCloned = $services.cloneNode(true),
-	$burgerMenu = d.querySelector('.burger-menu i')
+	$burgerMenu = d.querySelector('.burger-menu i'),
+	$headerButton = d.getElementById('header-button')
 
 function isMobileDevice() {
 	const mobileRegex = [
@@ -42,13 +43,18 @@ d.addEventListener('DOMContentLoaded', (e) => {
 d.addEventListener('click', ({ target }) => {
 	const $burgerModal = $header.querySelector('.burger-modal')
 	toggleModal(target, $burgerModal, $burgerMenu)
-	if (target.matches('figure button')) {
-		const $caption = target.parentElement
-		const $price = $caption.querySelector('small')
-		const price = $price.textContent
-		const preposition = price.includes('Desde') ? '' : 'de'
-		const product = target.dataset.product
-		const message = `Hola, me interesa solicitar el servicio de ${product} que tiene un precio ${preposition} ${price}`
+	if (target.matches('#header-button')) {
+		window.scrollTo({
+			top: 612,
+			behavior: 'smooth', // Opcional: hace que el desplazamiento sea suave
+		})
+	}
+
+	if (target.matches('.product') || target.matches('.product *')) {
+		const $caption = target.nextElementSibling
+		const $product = $caption.querySelector('small')
+		const product = $product.textContent
+		const message = `Hola, necesito información sobre el producto: ${product}`
 		sendClientMessage(message)
 	}
 })

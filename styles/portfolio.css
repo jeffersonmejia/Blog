@@ -82,19 +82,12 @@ nav a {
 	display: none;
 }
 .navbar-services a {
-	margin: 0 20px;
 	text-decoration: none;
 	color: var(--fds-blue-70);
 	border-bottom: 2px solid transparent;
 	transition: border-color 0.2s ease-in-out;
 	font-size: 0.8rem;
 	text-transform: uppercase;
-}
-
-@media (hover: hover) {
-	.navbar-services a:hover {
-		border-color: var(--fds-blue-70);
-	}
 }
 
 .modal {
@@ -137,9 +130,10 @@ nav a {
 	display: block;
 	width: 100%;
 	height: 100%;
-	padding: 12px;
+	padding: 12px 0;
 	font-weight: 700;
 	font-size: 0.7rem;
+	text-align: center;
 }
 
 section {
@@ -252,8 +246,8 @@ article a {
 	font-size: small;
 }
 .burger-menu {
-	width: 10vh;
-	height: 10vh;
+	width: 8vh;
+	height: 8vh;
 	z-index: 999;
 	border-radius: 50%;
 	position: fixed;
@@ -266,6 +260,10 @@ article a {
 	justify-content: center;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
+}
+
+.burger-menu:active {
+	transform: scale(0.8);
 }
 .list-services {
 	width: 80%;
@@ -310,10 +308,14 @@ footer {
 	nav > :is(.navbar-services, .navbar-social) {
 		display: flex;
 	}
+
 	nav div {
 		width: 80px;
 	}
 	section > article:not(:first-of-type):not(:last-of-type) {
 		margin: 0;
+	}
+	.navbar-services a {
+		margin: 0 20px;
 	}
 }

@@ -76,17 +76,34 @@ nav a {
 	cursor: pointer;
 }
 
+nav ul {
+	display: flex;
+}
+
+nav li {
+	list-style: none;
+}
+
+nav a {
+	cursor: pointer;
+}
+
 .navbar-services {
 	display: none;
 }
 .navbar-services a {
 	text-decoration: none;
-	color: white;
+	color: var(--fds-blue-70);
 	border-bottom: 2px solid transparent;
 	transition: border-color 0.2s ease-in-out;
 	font-size: 0.8rem;
 	text-transform: uppercase;
-	font-weight: bold;
+}
+
+@media (hover: hover) {
+	.navbar-services a:hover {
+		border-color: var(--fds-blue-70);
+	}
 }
 
 @media (hover: hover) {
@@ -368,6 +385,13 @@ footer {
 	nav > :is(.navbar-services, .navbar-social) {
 		display: flex;
 	}
+	.navbar-services a {
+		margin: 0 20px;
+	}
+	nav .navbar-services a {
+		color: white;
+		font-weight: bold;
+	}
 	article .navbar-social {
 		display: none;
 	}
@@ -432,5 +456,8 @@ footer {
 	footer {
 		margin-bottom: 0;
 		margin-top: 12px;
+	}
+	nav ul {
+		display: flex;
 	}
 }

@@ -50,10 +50,9 @@ d.addEventListener('click', ({ target }) => {
 		})
 	}
 
-	if (target.matches('.product') || target.matches('.product *')) {
-		const $caption = target.nextElementSibling
-		const $product = $caption.querySelector('small')
-		const product = $product.textContent
+	if (target.matches('.product img') || target.matches('.hidden-container')) {
+		const $product = target.parentElement.querySelector('figcaption')
+		const product = $product.querySelector('small').textContent
 		const message = `Hola, necesito información sobre el producto: ${product}`
 		sendClientMessage(message)
 	}

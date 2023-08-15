@@ -41,7 +41,7 @@ nav {
 }
 nav ul {
 	display: flex;
-	gap: 1rem;
+	gap: 2rem;
 	list-style: none;
 }
 
@@ -52,6 +52,7 @@ nav a {
 }
 
 header {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -60,11 +61,12 @@ header {
 	padding: 2rem 0 4rem 0;
 }
 header .name {
-	font-size: 3.4rem;
+	font-size: 2.2em;
+	text-align: center;
 }
 header .name-description {
 	font-weight: 200;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	width: 80%;
 	text-align: center;
 }
@@ -72,7 +74,7 @@ main {
 	padding: 2rem;
 	background-color: var(--secondary-color);
 }
-section {
+main section {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, auto));
 	gap: 2rem;
@@ -125,8 +127,11 @@ article p {
 }
 footer {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: space-between;
 	padding: 2rem;
+	gap: 4px;
 }
 footer a {
 	text-decoration: none;
@@ -136,8 +141,15 @@ footer a {
 footer .links {
 	list-style: none;
 	display: flex;
-	gap: 12px;
+	gap: 8px;
 }
+footer .separator {
+	font-size: 8px;
+	display: flex;
+	align-items: center;
+	color: var(--text-color-gray);
+}
+
 @media screen and (min-width: 800px) {
 	nav ul,
 	header,
@@ -150,8 +162,12 @@ footer .links {
 		padding: 3rem 0 6rem 0;
 		gap: 4px;
 	}
-	header .name-description {
+	header .name {
 		width: 100%;
+		font-size: 3.4rem;
+	}
+	header .name-description {
+		font-size: 1.4rem;
 	}
 	section {
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
@@ -178,5 +194,11 @@ footer .links {
 	}
 	.article-author-cover img {
 		width: 60px;
+	}
+	footer {
+		flex-direction: row;
+		align-items: center;
+		gap: 0;
+		padding: 2rem 0;
 	}
 }

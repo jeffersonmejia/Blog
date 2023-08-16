@@ -5,6 +5,7 @@
 	--tertiary-color: rgb(32, 32, 32);
 	--text-color: #f5f5f5;
 	--text-color-gray: gray;
+	--text-color-paragraph: rgb(200, 200, 200);
 	--border-color: #f2f2f2;
 	--border-secondary: 1px solid rgb(42, 42, 42);
 	--border-radius: 4px;
@@ -107,8 +108,9 @@ article:hover {
 	background-color: rgb(40, 40, 40);
 }
 article p {
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 	text-align: justify;
+	color: var(--text-color-paragraph);
 }
 
 .article-description img {
@@ -122,6 +124,7 @@ article p {
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	color: var(--text-color-paragraph);
 }
 .article-author img {
 	border-radius: 50%;

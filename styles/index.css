@@ -5,6 +5,7 @@
 	--tertiary-color: rgb(32, 32, 32);
 	--text-color: #f5f5f5;
 	--text-color-gray: gray;
+	--text-color-gray-2: rgb(180, 180, 180);
 	--text-color-paragraph: rgb(200, 200, 200);
 	--border-color: #f2f2f2;
 	--border-secondary: 1px solid rgb(42, 42, 42);
@@ -47,7 +48,7 @@ nav {
 	top: 0;
 }
 nav ul {
-	padding: 1.5rem;
+	padding: 18px;
 	width: 100%;
 	display: flex;
 	gap: 2rem;
@@ -59,6 +60,14 @@ nav a {
 	text-decoration: none;
 	font-size: 0.95rem;
 	color: var(--text-color);
+	padding-bottom: 2px;
+}
+.tab-active {
+	cursor: default;
+	color: var(--text-color-gray-2);
+}
+nav a:hover {
+	border-bottom: 2px solid white;
 }
 .logo-nav {
 	font-weight: bold;
@@ -156,6 +165,9 @@ footer a {
 	text-decoration: none;
 	color: var(--text-color-gray);
 	font-size: 0.85rem;
+}
+footer a:hover {
+	text-decoration: underline;
 }
 footer .links {
 	list-style: none;

@@ -37,12 +37,21 @@ html {
 }
 
 nav {
-	padding: 1.5rem;
+	background-color: var(--primary-color);
+	box-shadow: inset -20px 1px 12px rgba(0, 0, 0, 0.5);
+	transition: opacity 0.3s ease-in-out;
+}
+.nav-fixed {
+	position: sticky;
+	top: 0;
 }
 nav ul {
+	padding: 1.5rem;
+	width: 100%;
 	display: flex;
 	gap: 2rem;
 	list-style: none;
+	overflow: scroll;
 }
 
 nav a {
@@ -50,7 +59,14 @@ nav a {
 	font-size: 0.95rem;
 	color: var(--text-color);
 }
-
+.logo-nav {
+	font-weight: bold;
+	flex-grow: 1;
+}
+.logo-nav p {
+	font-size: 1.15rem;
+	width: 45vw;
+}
 header {
 	width: 100%;
 	display: flex;
@@ -149,7 +165,14 @@ footer .separator {
 	align-items: center;
 	color: var(--text-color-gray);
 }
-
+.hidden {
+	display: none;
+}
+@media screen and (min-width: 530px) {
+	nav ul {
+		overflow: hidden;
+	}
+}
 @media screen and (min-width: 800px) {
 	nav ul,
 	header,

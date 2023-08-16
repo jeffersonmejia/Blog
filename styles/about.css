@@ -1,0 +1,142 @@
+:root {
+	--font-text: 'Nunito Sans', sans-serif;
+	--primary-color: rgb(0, 0, 0);
+	--secondary-color: rgb(24, 24, 24);
+	--tertiary-color: rgb(32, 32, 32);
+	--text-color: #f5f5f5;
+	--text-color-gray: gray;
+	--text-color-gray-2: rgb(180, 180, 180);
+	--text-color-paragraph: rgb(200, 200, 200);
+	--border-color: #f2f2f2;
+	--border-secondary: 1px solid rgb(42, 42, 42);
+	--border-radius: 4px;
+	--link-color: rgb(196, 235, 255);
+	--black-transparent-5: rgba(0, 0, 0, 0.5);
+	--black-transparent-1: rgba(0, 0, 0, 0.1);
+	--navbar-height: 60px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+}
+html {
+	font-family: var(--font-text);
+	color: var(--text-light-color);
+	min-height: 100vh;
+	background-color: var(--primary-color);
+	color: var(--text-color);
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+nav {
+	background-color: var(--primary-color);
+	box-shadow: inset -20px 1px 12px rgba(0, 0, 0, 0.5);
+	transition: opacity 0.3s ease-in-out;
+}
+.nav-fixed {
+	position: sticky;
+	top: 0;
+}
+nav ul {
+	padding: 18px;
+	width: 100%;
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+	overflow: scroll;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 0.95rem;
+	color: var(--text-color);
+	padding-bottom: 2px;
+}
+.tab-active {
+	cursor: default;
+	color: var(--text-color-gray-2);
+}
+nav a:hover {
+	border-bottom: 2px solid white;
+}
+.logo-nav {
+	font-weight: bold;
+	flex-grow: 1;
+}
+.logo-nav p {
+	font-size: 1.15rem;
+	width: 45vw;
+}
+section {
+	width: 80%;
+	margin: auto;
+}
+section h1 {
+	font-size: 4rem;
+}
+.profile {
+	width: 100%;
+	border-radius: var(--border-radius);
+	margin: 1rem 0;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+	gap: 4px;
+}
+footer a {
+	text-decoration: none;
+	color: var(--text-color-gray);
+	font-size: 0.85rem;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer .links {
+	list-style: none;
+	display: flex;
+	gap: 8px;
+}
+footer .separator {
+	font-size: 8px;
+	display: flex;
+	align-items: center;
+	color: var(--text-color-gray);
+}
+.hidden {
+	display: none;
+}
+@media screen and (min-width: 530px) {
+	nav ul {
+		overflow: hidden;
+	}
+}
+@media screen and (min-width: 800px) {
+	nav ul,
+	section,
+	footer {
+		width: 80vw;
+		margin: auto;
+	}
+	footer {
+		flex-direction: row;
+		align-items: center;
+		gap: 0;
+		padding: 2rem 0;
+	}
+}

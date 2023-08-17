@@ -7,8 +7,7 @@
 	--text-color-gray: gray;
 	--text-color-gray-2: rgb(180, 180, 180);
 	--text-color-paragraph: rgb(200, 200, 200);
-	--ancle-color: rgb(190, 149, 255);
-	--ancle-color-visited: rgb(149, 228, 255);
+	--ancle-color: rgb(149, 228, 255);
 	--border-color: #f2f2f2;
 	--border-secondary: 1px solid rgb(42, 42, 42);
 	--border-radius: 4px;
@@ -92,13 +91,13 @@ main section h1 {
 main a {
 	color: var(--ancle-color);
 }
-main a:visited {
-	color: var(--ancle-color-visited);
-}
 main article {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+}
+main p {
+	text-align: justify;
 }
 article img {
 	border-radius: var(--border-radius);

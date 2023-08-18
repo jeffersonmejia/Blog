@@ -53,7 +53,8 @@ function setCategoryColor() {
 
 function toggleLogo() {
 	const y = window.scrollY
-	if (y >= 200) {
+	console.log(y)
+	if (y >= 65) {
 		$logo.classList.remove('hidden')
 		if (!$nav.classList.contains('nav-fixed')) {
 			$nav.style.opacity = 0

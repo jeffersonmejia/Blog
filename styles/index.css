@@ -28,6 +28,9 @@ html {
 	background-color: var(--primary-color);
 	color: var(--text-color);
 }
+body {
+	scroll-behavior: smooth;
+}
 
 @keyframes opacity {
 	from {

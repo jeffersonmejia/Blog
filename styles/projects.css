@@ -20,6 +20,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+img {
+	width: 100%;
+}
 
 html {
 	font-family: var(--font-text);
@@ -28,7 +31,9 @@ html {
 	background-color: var(--primary-color);
 	color: var(--text-color);
 }
-
+body {
+	scroll-behavior: smooth;
+}
 @keyframes opacity {
 	from {
 		opacity: 0;
@@ -77,25 +82,6 @@ nav a:hover {
 	font-size: 1.15rem;
 	width: 45vw;
 }
-header {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 4px;
-	padding: 2rem 0 4rem 0;
-}
-header .name {
-	font-size: 2.2em;
-	text-align: center;
-}
-header .name-description {
-	font-weight: 200;
-	font-size: 1.2rem;
-	width: 80%;
-	text-align: center;
-}
 main {
 	padding: 2rem;
 	background-color: var(--secondary-color);
@@ -105,7 +91,11 @@ main section {
 	grid-template-columns: repeat(auto-fill, minmax(250px, auto));
 	gap: 2rem;
 }
-article {
+main h1 {
+	grid-column: 1/-1;
+	font-size: 4rem;
+}
+.article-ancle {
 	background-color: var(--tertiary-color);
 	padding: 1.5rem;
 	border-radius: var(--border-radius);
@@ -113,45 +103,54 @@ article {
 	cursor: pointer;
 	border: var(--border-secondary);
 }
-article:hover {
+.article-ancle {
+	text-decoration: none;
+	color: var(--text-color);
+}
+.article-ancle h3 {
+	margin-top: 0.5rem;
+}
+.project-description,
+.project-description > figcaption {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.article-ancle:hover {
 	background-color: rgb(40, 40, 40);
 }
+.article-ancle img {
+	max-height: 200px;
+	min-height: 200px;
+	object-fit: cover;
+	border-radius: var(--border-radius);
+}
 article p {
-	margin: 1rem 0;
 	text-align: justify;
 	color: var(--text-color-paragraph);
 }
-
-.article-description img {
-	width: 100%;
-	max-height: 200px;
-	border-radius: var(--border-radius);
-	object-fit: cover;
-	object-position: center;
-}
-.article-author {
+.author-project {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	color: var(--text-color-paragraph);
 }
-.article-author img {
+.author-project img {
+	min-height: 0;
+	width: 60px;
 	border-radius: 50%;
 }
-.article-author a {
-	text-decoration: none;
-	color: var(--text-color);
-	font-size: 0.8rem;
+.author-project figcaption {
+	display: flex;
+	flex-direction: column;
 }
-.article-author a:hover {
-	text-decoration: underline;
+.category {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
 }
-
-.article-author h6 {
-	font-weight: 400;
-}
-.article-author-cover {
-	display: none;
+.category small {
+	border-radius: var(--border-radius);
+	padding: 2px 6px;
 }
 footer {
 	display: flex;
@@ -193,49 +192,16 @@ footer .separator {
 		padding: 18px 0;
 	}
 	nav ul,
-	header,
 	section,
 	footer {
 		width: 80vw;
 		margin: auto;
 	}
-	header {
-		padding: 3rem 0 6rem 0;
-		gap: 4px;
-	}
-	header .name {
-		width: 100%;
-		font-size: 3.4rem;
-	}
-	header .name-description {
-		font-size: 1.4rem;
-	}
+
 	section {
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 	}
-	.article-cover {
-		margin-top: 2rem;
-		grid-column: 1/-1;
-		padding: 2.5rem;
-	}
-	.article-cover .article-description img {
-		max-height: none;
-	}
-	.article-cover .article-description {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
-		align-items: center;
-	}
-	.article-cover .article-description + .article-author {
-		display: none;
-	}
-	.article-author-cover {
-		display: flex;
-	}
-	.article-author-cover img {
-		width: 60px;
-	}
+
 	footer {
 		flex-direction: row;
 		align-items: center;

@@ -119,6 +119,7 @@ article {
 article:hover {
 	background-color: rgb(40, 40, 40);
 }
+
 article p {
 	margin: 1rem 0;
 	text-align: justify;
@@ -132,6 +133,7 @@ article p {
 	object-fit: cover;
 	object-position: center;
 }
+
 .article-author {
 	display: flex;
 	align-items: center;
@@ -183,6 +185,7 @@ footer .separator {
 	align-items: center;
 	color: var(--text-color-gray);
 }
+
 .hidden {
 	display: none;
 }

@@ -153,6 +153,7 @@ footer .separator {
 	align-items: center;
 	color: var(--text-color-gray);
 }
+
 .hidden {
 	display: none;
 }

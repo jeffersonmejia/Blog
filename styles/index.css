@@ -158,6 +158,18 @@ article p {
 .article-author-cover {
 	display: none;
 }
+.grid-memories {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4px;
+	margin-bottom: 4px;
+}
+.grid-memories img {
+	max-height: 80px;
+	object-fit: cover;
+	object-position: center;
+}
 footer {
 	display: flex;
 	flex-direction: column;

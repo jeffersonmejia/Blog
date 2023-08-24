@@ -4,7 +4,7 @@ Made with love from <img src='https://i.postimg.cc/Mc25FLHJ/Flag-of-Ecuador.png'
 
 # **Blog**
 
-This blog is about me, my projects and some writtings ✍️
+This blog is about me, my projects and some writings ✍️
 
 ## Content table
 

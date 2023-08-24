@@ -32,7 +32,7 @@ Jefferson Mejía - Eng Systems, Web developer </>
 
 ### 5. Credits
 
-Some picture was taken from internet, so here you'll find the respective credits.
+Some pictures was taken from internet, so here you'll find the respective credits.
 
 - Binary tree algorithm picture by [noel_delMar](https://www.istockphoto.com/es/portfolio/noel_delMar?mediatype=illustration)
 

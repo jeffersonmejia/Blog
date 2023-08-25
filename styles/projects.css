@@ -125,7 +125,7 @@ main h1 {
 	object-fit: cover;
 	border-radius: var(--border-radius);
 }
-article p {
+.article-ancle p {
 	text-align: justify;
 	color: var(--text-color-paragraph);
 }

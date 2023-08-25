@@ -201,7 +201,61 @@ footer .separator {
 	section {
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 	}
+	.article-ancle:first-of-type {
+		grid-column: 1/4;
+	}
+	.article-ancle:first-of-type h3 {
+		font-size: 2rem;
+	}
+	.article-ancle:first-of-type figure {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		align-items: center;
+	}
+	.article-ancle:first-of-type img {
+		max-height: 250px;
+		margin: 0;
+	}
+	.article-ancle:first-of-type figcaption {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		height: fit-content;
+		column-gap: 1.5rem;
+	}
+	.article-ancle:first-of-type p {
+		grid-column: 1/-1;
+	}
 
+	.article-ancle:first-of-type .author-project {
+		display: flex;
+		flex-direction: column;
+		grid-column: 1/2;
+		grid-row: 3/4;
+		height: fit-content;
+		gap: 6px;
+		margin-left: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	.article-ancle:first-of-type .author-project figcaption {
+		display: flex;
+	}
+	.article-ancle:first-of-type .category {
+		grid-column: 1/-1;
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+		grid-column: 2/3;
+		gap: 6px;
+		margin-right: auto;
+		align-items: center;
+		justify-content: center;
+	}
+	.article-ancle:first-of-type .category small {
+		text-align: center;
+		width: 100%;
+	}
 	footer {
 		flex-direction: row;
 		align-items: center;

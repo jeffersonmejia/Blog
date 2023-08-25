@@ -93,7 +93,7 @@ main section {
 }
 main h1 {
 	grid-column: 1/-1;
-	font-size: 4rem;
+	font-size: 2rem;
 }
 .article-ancle {
 	background-color: var(--tertiary-color);
@@ -207,5 +207,8 @@ footer .separator {
 		align-items: center;
 		gap: 0;
 		padding: 2rem 0;
+	}
+	main h1 {
+		font-size: 4rem;
 	}
 }

@@ -20,7 +20,7 @@ From the beginning until now, just scroll down to get access :)
 
 ## 2. Installation
 
-1. Get access [here](https://jeffersonmejia.github.io/universe-app) 💡
+1. Get access [here](https://jeffersonmejia.github.io/blog) 💡
 
 ## 3. Preview
 

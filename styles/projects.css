@@ -149,6 +149,7 @@ h1 {
 	text-decoration: none;
 	color: var(--text-color);
 	transition: opacity 0.2s ease-in-out;
+	max-width: 343px;
 }
 .article-ancle h3 {
 	margin-top: 0.5rem;
@@ -251,6 +252,7 @@ footer .separator {
 	}
 	.article-ancle:first-of-type {
 		grid-column: 1/4;
+		max-width: none;
 	}
 	.article-ancle:first-of-type h3 {
 		font-size: 2rem;

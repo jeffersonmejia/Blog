@@ -8,6 +8,7 @@
 	--text-color-gray-2: rgb(180, 180, 180);
 	--text-color-paragraph: rgb(200, 200, 200);
 	--border-color: #f2f2f2;
+	--border-primary: 1px solid rgb(38, 38, 38);
 	--border-secondary: 1px solid rgb(42, 42, 42);
 	--border-radius: 4px;
 	--link-color: rgb(196, 235, 255);
@@ -90,8 +91,47 @@ main section {
 	grid-template-columns: repeat(auto-fill, minmax(250px, auto));
 	gap: 2rem;
 }
-main h1 {
-	grid-column: 1/-1;
+.projects-filter-container {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	grid-column: 2/-1;
+}
+.projects-filter-container button {
+	height: fit-content;
+	background-color: var(--tertiary-color);
+	padding: 8px 16px;
+	color: var(--text-color);
+	border-radius: var(--border-radius);
+	border: var(--border-primary);
+	cursor: pointer;
+}
+
+.projects-filter-content {
+	width: 50vw;
+	max-width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	position: absolute;
+	transform: translateY(6rem);
+	background-color: var(--tertiary-color);
+	border: var(--border-primary);
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	box-shadow: 1px 1px 12px var(--black-transparent-5);
+}
+.projects-filter-content li {
+	list-style: none;
+	padding: 2px 6px;
+	border-radius: var(--border-radius);
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+.clear-filter {
+	background-color: rgb(48, 48, 48);
+}
+h1 {
 	font-size: 2rem;
 }
 .article-ancle {
@@ -103,6 +143,7 @@ main h1 {
 	border: var(--border-secondary);
 	text-decoration: none;
 	color: var(--text-color);
+	transition: opacity 0.2s ease-in-out;
 }
 .article-ancle h3 {
 	margin-top: 0.5rem;
@@ -175,6 +216,11 @@ footer .separator {
 	display: flex;
 	align-items: center;
 	color: var(--text-color-gray);
+}
+.no-select {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 .hidden {
 	display: none;

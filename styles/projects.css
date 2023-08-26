@@ -91,16 +91,21 @@ main section {
 	grid-template-columns: repeat(auto-fill, minmax(250px, auto));
 	gap: 2rem;
 }
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-column: 1/-1;
+}
 .projects-filter-container {
 	display: flex;
 	justify-content: end;
 	align-items: center;
-	grid-column: 2/-1;
 }
 .projects-filter-container button {
 	height: fit-content;
 	background-color: var(--tertiary-color);
-	padding: 8px 16px;
+	padding: 12px 16px;
 	color: var(--text-color);
 	border-radius: var(--border-radius);
 	border: var(--border-primary);
@@ -108,7 +113,7 @@ main section {
 }
 
 .projects-filter-content {
-	width: 50vw;
+	width: 80%;
 	max-width: 400px;
 	display: flex;
 	flex-wrap: wrap;
@@ -230,7 +235,7 @@ footer .separator {
 		overflow: hidden;
 	}
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
 	nav ul {
 		padding: 18px 0;
 	}

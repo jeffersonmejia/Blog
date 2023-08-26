@@ -61,19 +61,18 @@ nav ul {
 	list-style: none;
 	overflow: scroll;
 }
-
 nav a {
 	text-decoration: none;
 	font-size: 0.95rem;
-	color: var(--text-color);
+	color: var(--text-color-gray-2);
 	padding-bottom: 2px;
 }
 .tab-active {
 	cursor: default;
-	color: var(--text-color-gray-2);
+	color: var(--text-color);
 }
 nav a:hover {
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid var(--text-color);
 }
 .logo-nav {
 	font-weight: bold;
@@ -101,6 +100,7 @@ main article {
 	gap: 0.5rem;
 }
 main p {
+	margin: 0.5rem 0;
 	text-align: justify;
 }
 article img {

@@ -144,7 +144,7 @@ article img {
 	list-style: none;
 }
 .profile-curriculum {
-	margin-top: 0.5rem;
+	margin-top: 0.2rem;
 	width: fit-content;
 }
 .profile-curriculum a {
@@ -266,5 +266,8 @@ footer .separator {
 		align-items: center;
 		gap: 0;
 		padding: 2rem 0;
+	}
+	.profile-curriculum {
+		margin-top: 0.5rem;
 	}
 }

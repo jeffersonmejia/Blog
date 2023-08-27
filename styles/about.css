@@ -143,6 +143,10 @@ article img {
 	color: rgb(150, 150, 150);
 	list-style: none;
 }
+.profile-curriculum {
+	margin-top: 0.5rem;
+	width: fit-content;
+}
 .profile-curriculum a {
 	display: flex;
 	align-items: center;

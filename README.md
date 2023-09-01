@@ -28,7 +28,7 @@ From the beginning until now, just scroll down to get access :)
 
 ## 4. Author
 
-Jefferson Mejía - Eng Systems, Web developer </>
+[Jefferson Mejía](https://jeffersonmejia.github.io/blog) - Eng. Systems, Web developer
 
 ### 5. Credits
 

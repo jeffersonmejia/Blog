@@ -39,6 +39,10 @@ const categoriesColor = {
 		background: 'rgb(0 93 126)',
 		color: 'rgb(84 210 255)',
 	},
+	['typescript']: {
+		background: 'rgb(49 120 198)',
+		color: 'rgb(255,255,255)',
+	},
 }
 const categoriesName = Object.keys(categoriesColor)
 
@@ -85,6 +89,22 @@ function getFilterByCategory() {
 		const $category = d.createElement('li')
 		const { background, color } = categoriesColor[category]
 
+		const words = category.split(' ')
+		const capitalizedWords = words.map((word) => {
+			let first = word.charAt(0),
+				second = word.slice(1)
+			joined = ''
+			if (word !== 'de') {
+				first = first.toUpperCase()
+				second = second.toLocaleLowerCase()
+			}
+
+			joined = `${first}${second}`
+
+			return joined
+		})
+		category = capitalizedWords.join(' ')
+
 		$category.textContent = category
 		$category.style.backgroundColor = background
 		$category.style.color = color
@@ -112,6 +132,7 @@ function filterProjectsByCategory(category) {
 			for (let i = 0; i < categories.length; i++) {
 				if (hasCategory) break
 				const projectCategory = categories[i]
+				category = category.toLowerCase()
 				hasCategory = projectCategory === category
 			}
 			if (!hasCategory) {

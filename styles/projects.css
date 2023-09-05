@@ -307,6 +307,9 @@ footer .separator {
 		text-align: center;
 		width: 100%;
 	}
+	.article-ancle:first-of-type .author-project small {
+		text-align: center;
+	}
 	footer {
 		flex-direction: row;
 		align-items: center;

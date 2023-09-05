@@ -32,7 +32,7 @@ const categoriesColor = {
 		color: 'rgb(0,0,0)',
 	},
 	['desarrollo web']: {
-		background: 'rgb(7 85 48)',
+		background: 'rgb(7, 85, 48)',
 		color: 'rgb(67,255,166)',
 	},
 	['frontend']: {

@@ -98,9 +98,12 @@ header .name-description {
 	font-size: 1.2rem;
 	width: 80%;
 	text-align: center;
+	color: var(--text-color-gray-2);
 }
 header a{
 	color:inherit;
+	color: white;
+	text-decoration:none;
 }
 main {
 	padding: 2rem;

@@ -99,6 +99,9 @@ header .name-description {
 	width: 80%;
 	text-align: center;
 }
+header a{
+	color:inherit;
+}
 main {
 	padding: 2rem;
 	background-color: var(--secondary-color);

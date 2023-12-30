@@ -7,7 +7,7 @@
 	--text-color-gray: gray;
 	--text-color-gray-2: rgb(180, 180, 180);
 	--text-color-paragraph: rgb(200, 200, 200);
-	--ancle-color: rgb(237, 255, 188);
+	--ancle-color: rgb(170, 170, 170);
 	--border-color: #f2f2f2;
 	--border-secondary: 1px solid rgb(42, 42, 42);
 	--border-radius: 4px;
@@ -94,12 +94,14 @@ main section h1 {
 }
 .summary-paragraph {
 	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 section p {
 	color: rgb(150, 150, 150);
 }
 main a {
-	text-decoration: none;
 	color: var(--ancle-color);
 }
 main article {

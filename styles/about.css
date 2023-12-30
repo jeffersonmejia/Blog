@@ -48,6 +48,7 @@ nav {
 	background-color: var(--primary-color);
 	box-shadow: inset -20px 1px 12px rgba(0, 0, 0, 0.5);
 	transition: opacity 0.3s ease-in-out;
+	display: none;
 }
 .nav-fixed {
 	position: sticky;
@@ -140,6 +141,7 @@ article img {
 	justify-content: space-between;
 	margin: 1rem 0;
 	gap: 1rem;
+	margin-top: 2rem;
 }
 
 .profile {
@@ -197,6 +199,7 @@ footer a {
 	text-decoration: none;
 	color: var(--text-color-gray);
 	font-size: 0.85rem;
+	transition: color 0.3s ease-in-out;
 }
 footer a:hover {
 	text-decoration: underline;
@@ -205,6 +208,7 @@ footer .links {
 	list-style: none;
 	display: flex;
 	gap: 8px;
+	margin-bottom: 2rem;
 }
 footer .separator {
 	font-size: 8px;
@@ -213,6 +217,26 @@ footer .separator {
 	color: var(--text-color-gray);
 }
 
+.nav-bottom {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+	border-top: 1px solid rgb(54, 54, 54);
+	padding: 1rem 2rem;
+	list-style: none;
+}
+.nav-bottom li {
+	font-size: 0.8rem;
+}
+.nav-bottom a {
+	text-decoration: none;
+	color: var(--text-color-gray-2);
+}
 .hidden {
 	display: none;
 }
@@ -225,6 +249,7 @@ footer .separator {
 		justify-content: flex-end;
 		gap: 2rem;
 		flex-direction: row-reverse;
+		margin-top: 1rem;
 	}
 	.profile {
 		width: 230px;
@@ -239,6 +264,9 @@ footer .separator {
 	}
 }
 @media screen and (min-width: 800px) {
+	nav {
+		display: block;
+	}
 	nav ul {
 		padding: 18px 0;
 	}
@@ -283,5 +311,11 @@ footer .separator {
 	}
 	.profile-curriculum {
 		margin-top: 0.5rem;
+	}
+	footer .links {
+		margin-bottom: 0;
+	}
+	.nav-bottom {
+		display: none;
 	}
 }

@@ -1,6 +1,7 @@
 const d = document,
 	$nav = d.querySelector('nav'),
-	$logo = d.querySelector('.logo-nav')
+	$logo = d.querySelector('.logo-nav'),
+	$contactMeSection = d.querySelector('footer')
 
 function toggleLogo() {
 	const y = window.scrollY
@@ -19,6 +20,30 @@ function toggleLogo() {
 	}
 }
 
+function scrollContactMe() {
+	const $highlightItems = $contactMeSection.querySelectorAll('a')
+
+	$contactMeSection.scrollIntoView({ behavior: 'smooth' })
+
+	setTimeout(() => {
+		$highlightItems.forEach((el, index) => {
+			if (index > 0) el.style.color = 'white'
+		})
+	}, 1000)
+	setTimeout(() => {
+		$highlightItems.forEach((el) => {
+			el.style.color = 'var(--text-color-gray)'
+		})
+	}, 2000)
+}
+
+d.addEventListener('click', (e) => {
+	if (e.target.matches('.contact-me-ancle')) {
+		scrollContactMe()
+	}
+})
 d.addEventListener('scroll', (e) => {
-	toggleLogo()
+	if (window.innerWidth > 800) {
+		toggleLogo()
+	}
 })

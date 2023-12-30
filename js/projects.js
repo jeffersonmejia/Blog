@@ -3,7 +3,8 @@ const d = document,
 	$logo = d.querySelector('.logo-nav'),
 	$categories = d.querySelectorAll('.category small'),
 	$categoryFilter = d.querySelector('.projects-filter-content'),
-	$projects = d.querySelectorAll('.article-ancle')
+	$projects = d.querySelectorAll('.article-ancle'),
+	$contactMeSection = d.querySelector('footer')
 
 const categoriesColor = {
 	['java']: {
@@ -159,13 +160,30 @@ function getCategoriesProject(project) {
 	return categoriesName
 }
 
+function scrollContactMe() {
+	const $highlightItems = $contactMeSection.querySelectorAll('a')
+
+	$contactMeSection.scrollIntoView({ behavior: 'smooth' })
+
+	setTimeout(() => {
+		$highlightItems.forEach((el, index) => {
+			if (index > 0) el.style.color = 'white'
+		})
+	}, 1000)
+	setTimeout(() => {
+		$highlightItems.forEach((el) => {
+			el.style.color = 'var(--text-color-gray)'
+		})
+	}, 2000)
+}
 d.addEventListener('DOMContentLoaded', (e) => {
 	setCategoryColor()
 	getFilterByCategory()
 })
-
 d.addEventListener('scroll', (e) => {
-	toggleLogo()
+	if (window.innerWidth > 800) {
+		toggleLogo()
+	}
 })
 
 d.addEventListener('click', (e) => {
@@ -175,5 +193,8 @@ d.addEventListener('click', (e) => {
 	if (e.target.matches('.projects-filter-content li')) {
 		const category = e.target.textContent
 		filterProjectsByCategory(category)
+	}
+	if (e.target.matches('.contact-me-ancle')) {
+		scrollContactMe()
 	}
 })

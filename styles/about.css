@@ -7,7 +7,7 @@
 	--text-color-gray: gray;
 	--text-color-gray-2: rgb(180, 180, 180);
 	--text-color-paragraph: rgb(200, 200, 200);
-	--ancle-color: rgb(149, 228, 255);
+	--ancle-color: rgb(237, 255, 188);
 	--border-color: #f2f2f2;
 	--border-secondary: 1px solid rgb(42, 42, 42);
 	--border-radius: 4px;
@@ -89,6 +89,15 @@ main section {
 main section h1 {
 	font-size: 2rem;
 }
+.summary-title {
+	margin-top: 1rem;
+}
+.summary-paragraph {
+	margin-bottom: 2rem;
+}
+section p {
+	color: rgb(150, 150, 150);
+}
 main a {
 	text-decoration: none;
 	color: var(--ancle-color);
@@ -100,12 +109,15 @@ main article {
 }
 main p {
 	margin: 0.5rem 0;
+	margin-top: 0rem;
 	text-align: justify;
 }
+
 article img {
 	border-radius: var(--border-radius);
 	margin: 12px 0;
 }
+
 .img-container {
 	width: 100%;
 	display: grid;
@@ -208,7 +220,7 @@ footer .separator {
 	}
 	.profile-container {
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
 		gap: 2rem;
 		flex-direction: row-reverse;
 	}

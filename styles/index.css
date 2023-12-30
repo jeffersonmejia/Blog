@@ -226,6 +226,16 @@ footer .separator {
 	text-decoration: none;
 	color: var(--text-color-gray-2);
 }
+.arrow-up-fixed {
+	position: fixed;
+	right: 2vh;
+	bottom: 10vh;
+	background-color: black;
+	border: var(--border-secondary);
+	padding: 0.5rem 1rem;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+}
 .hidden {
 	display: none;
 }
@@ -293,6 +303,9 @@ footer .separator {
 	}
 	footer .links {
 		margin-bottom: 0;
+	}
+	.arrow-up-fixed {
+		display: none;
 	}
 	.nav-bottom {
 		display: none;

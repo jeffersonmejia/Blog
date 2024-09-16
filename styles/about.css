@@ -101,6 +101,8 @@ main section h1 {
 }
 section p {
 	color: rgb(150, 150, 150);
+	line-height: 24px;
+
 }
 main a {
 	color: var(--ancle-color);

@@ -7,27 +7,6 @@ const d = document,
 	$contactMeSection = d.querySelector('footer')
 
 const categoriesColor = {
-	['java']: {
-		background: 'rgb(177, 118, 0)',
-		color: 'rgb(255, 211, 124)',
-	},
-	['estructura de datos']: {
-		background: 'rgb(5, 88, 0)',
-		color: 'rgb(82, 255, 103)',
-	},
-	['algoritmos']: {
-		background: 'rgb(0, 70, 96)',
-		color: 'rgb(74, 188, 255)',
-	},
-	['c']: {
-		background: 'rgb(77, 89, 147)',
-		color: 'rgb(255, 255, 255)',
-	},
-	['consola']: {
-		background: 'rgb(96, 0, 80)',
-		color: 'rgb(236, 74, 255)',
-	},
-
 	['javascript']: {
 		background: 'rgb(177, 177, 0)',
 		color: 'rgb(0,0,0)',
